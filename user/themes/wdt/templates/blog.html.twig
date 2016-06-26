@@ -1,0 +1,29 @@
+{% embed './base.html.twig' %}
+    {% set collection = page.collection() %}
+    {% block content %}
+        {% if page.content|trim('') != '' or uri.param('tag') %}
+        <article class="post hentry published">
+            <header class="entry-header">
+                <h1 class="entry-title">{{ uri.param('tag') ? uri.param('tag') : page.title }}</h1>
+            </header>
+            {% if page.content|trim('') != '' or uri.param('tag') %}
+            <div class="entry-content">
+                {{ page.content }}
+            </div>
+            {% endif %}
+            <footer class="site-footer"></footer>
+        </article>
+        {% endif %}
+
+
+        {% for child in collection %}
+            {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
+        {% endfor %}
+
+        {% if config.plugins.pagination.enabled and collection.params.pagination %}
+            {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+        {% endif %}
+    {% endblock %}
+{% endembed %}
+
+

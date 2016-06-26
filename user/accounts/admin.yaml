@@ -1,0 +1,9 @@
+email: cholewczuk@gmail.com
+access:
+  admin:
+    login: true
+    super: true
+fullname: Admin
+title: Admin
+state: enabled
+hashed_password: $2y$10$UxCBltg8emtpgS70mga0de6uL4GOEXhGRHg7.8xFEjEf.BbhMAo9W

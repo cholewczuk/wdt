@@ -1,0 +1,112 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set is_sidebar = header.sidebar is sameas(true) or (header.sidebar is not defined and theme_config.sidebar is sameas(true)) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<head>
+
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    {% include 'partials/metadata.html.twig' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+    {% block stylesheets %}
+        {% do assets.addCss('https://fonts.googleapis.com/css?family=Lato:400,700,700italic,400italic,300,300italic,100,100italic,900,900italic&subset=latin,latin-ext',103) %}
+        {% do assets.addCss('https://fonts.googleapis.com/css?family=Raleway:400,100,300,700,900&subset=latin,latin-ext',103) %}
+        {% do assets.addCss('theme://css/font-awesome.min.css',103) %}
+        {% do assets.addCss('theme://css/style.css', 102) %}
+        {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
+            {% do assets.addJs('theme://js/html5shiv-printshiv.min.js') %}
+        {% endif %}
+    {% endblock %}
+    {{ assets.css() }}
+
+    {% block javascripts %}
+        {% do assets.addJs('jquery',101) %}
+        {% do assets.addJs('theme://js/main.js') %}
+    {% endblock %}
+    {{ assets.js() }}
+
+{% endblock head%}
+</head>
+<body id="top" class="{{ page.header.body_classes }}">
+    <div id="page" class="hfeed site">
+        {% block header %}
+        <div class="navigation-bar clear">
+            <div class="navigation-block">
+                <nav class="navigation-mobile visible-mobile">
+                    <ul>
+                        <li>
+                            <a class="navigation-toggle" href="#" class=""><i class="fa fa-bars"><span class="screen-reader-text">Menu</span></i></a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="navigation-social">
+                    <ul>
+                        <li>
+                            <a href="https://facebook.com" class=""><i class="fa fa-facebook"><span class="screen-reader-text">Facebook</span></i></a>
+                        </li>
+                    </ul>
+                </nav>
+                {% if config.plugins.simplesearch.enabled %}
+                    <nav class="navigation-search">
+                        <ul>
+                            <li>
+                                <a href="#" class="navigation-link open-search top-search"><i class="fa fa-search"><span class="screen-reader-text">Szukaj</span></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                {% endif %}
+
+                <nav id="site-navigation" class="navigation-main">
+                    {% block header_navigation %}
+                        {% include 'partials/navigation.html.twig' %}
+                    {% endblock %}
+                </nav>
+            </div>
+        </div>
+
+        {% if config.plugins.simplesearch.enabled %}
+            {% include 'partials/simplesearch_searchbox.html.twig' %}
+        {% endif %}
+
+        <header class="header">
+            <a class="header-logo" href="{{ base_url == '' ? '/' : base_url }}" ref="home">
+                <img src="{{ theme_url }}/images/logo.png" />
+            </a>
+            <h1 class="header-title">
+                Stowarzyszenie Miłosników Sportów Kynologicznych
+            </h1>
+        </header>
+
+        <nav class="breadcrumbs">
+            {% if config.plugins.breadcrumbs.enabled %}
+                {% include 'partials/breadcrumbs.html.twig' %}
+            {% endif %}
+        </nav>
+        {% endblock %}
+
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area{{ is_sidebar ? '' : ' full-width' }}">
+                <main id="main" class="site-main">
+                    {% block content %}{% endblock %}
+                </main>
+            </div>
+            {% if is_sidebar %}
+                <div id="secondary" class="widget-area" role="complementary">
+                {% include 'partials/sidebar.html.twig' %}
+                </div>
+            {% endif %}
+        </div>
+
+        {% block footer %}
+        <footer class="site-footer">
+            <span>© {{ site.title }} - {{ date().format('Y') }}</span>
+        </footer>
+        {% endblock %}
+    </div><!-- #page -->
+    {{ assets.js('bottom') }}
+</body>
+</html>

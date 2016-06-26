@@ -1,0 +1,183 @@
+button,
+input,
+select,
+textarea {
+  font-size: 100%; /* Corrects font size not being inherited in all browsers */
+  margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+}
+
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+#infinite-handle span {
+  border: 0;
+  border-radius: 0;
+  background: $appColorMain;
+  color: #fff;
+  padding: 1em 1.6em;
+  cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+  font-size: 14px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  line-height: 1;
+  outline: none;
+  text-transform: uppercase;
+  transition: background .3s ease-in-out;
+}
+
+.button:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+#infinite-handle span:hover {
+  background: $appColorSecond;
+  color: #fff;
+}
+
+.button:focus,
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+#infinite-handle span:focus,
+.button:active,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+#infinite-handle span:active {
+  background: #b9b9b9;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0; /* Addresses excess padding in IE8/9 */
+}
+
+input[type="search"] {
+  -webkit-appearance: none; /* Addresses appearance set to searchfield in S5, Chrome */
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  -webkit-appearance: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+  -webkit-appearance: none;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 0;
+  outline: none;
+  color: #b9b9b9;
+  background: rgba(0, 0, 0, .03);
+  transition: border .3s ease-in-out;
+  box-shadow: inset 5px 5px 10px -5px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  color: #5e5e5e;
+  border: 1px solid $appColorMain;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+select {
+  padding: .375em .8em;
+}
+
+textarea {
+  overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+  padding-left: .375em;
+  vertical-align: top; /* Improves readability and alignment in all browsers */
+  width: 100%;
+}
+
+select {
+  -webkit-appearance: menulist;
+}
+
+.contact-form .clear-form {
+  clear: both;
+}
+
+.contact-form input[type='text'],
+.contact-form input[type='email'],
+.contact-form select {
+  width: 300px;
+  max-width: 98%;
+  margin-bottom: 13px;
+}
+
+.contact-form textarea {
+  height: 200px;
+  width: 80%;
+  float: none;
+  margin-bottom: 13px;
+}
+
+.contact-form input[type='radio'],
+.contact-form input[type='checkbox'] {
+  float: none;
+  margin-bottom: 13px;
+}
+
+.contact-form label {
+  margin-bottom: 3px;
+  float: none;
+  font-weight: bold;
+  display: block;
+}
+
+.contact-form label.checkbox,
+.contact-form label.radio {
+  margin-bottom: 3px;
+  float: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.contact-form label span {
+  color: #AAA;
+  margin-left: 4px;
+  font-weight: normal;
+}
+
+.contact-form-submission {
+  margin-bottom: 4em;
+  padding: 1.5em 1em;
+}
+
+.contact-form-submission p {
+  margin: 0 auto;
+}
+
+.form-error-message {
+  color: red;
+}
+
+.textwidget .contact-form input[type='text'],
+.textwidget .contact-form input[type='email'],
+.textwidget .contact-form textarea {
+  width: 250px;
+  max-width: 100%;
+  box-sizing: border-box;
+}

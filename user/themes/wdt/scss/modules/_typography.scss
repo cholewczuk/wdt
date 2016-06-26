@@ -1,0 +1,247 @@
+body,
+button,
+input,
+select,
+textarea {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: $appColorText;
+  font-family: $appFontFamilyRegular;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+.small-part {
+  font-size: 13px;
+  font-size: 1.3rem;
+  color: $appColorTextLight;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.small-part a {
+  color: $appColorTextLight;
+}
+
+.site-info {
+  color: $appColorTextLight;
+}
+
+.site-info a,
+.site-info a:hover {
+  color: $appColorSecond;
+}
+
+.site-info a:hover {
+  border-bottom: 1px dotted;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-weight: 300;
+  font-family: $appFontSansSerif;
+  margin: .8em 0;
+}
+
+h1 {
+  font-size: 42px;
+  font-size: 4.2rem;
+  line-height: 1.2;
+  margin: .4em 0;
+}
+
+h2 {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 20px;
+  font-size: 2.0rem;
+}
+
+h4 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-family: $appFontSansSerif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-family: $appFontSansSerif;
+  font-size: 12px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 1.6em;
+}
+
+blockquote + p,
+div.notices p {
+  margin-top: 1.6em;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  border-left: 10px solid #F0F2F4;
+}
+
+blockquote p {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+blockquote cite {
+  display: block;
+  text-align: right;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+blockquote > blockquote > blockquote {
+  margin: 0;
+}
+
+blockquote > blockquote > blockquote p {
+  padding: 15px;
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+blockquote > blockquote > blockquote > p {
+  margin-left: -30px;
+  border-left: 10px solid #F0AD4E;
+  background: #FCF8F2;
+  color: #df8a13;
+}
+
+blockquote > blockquote > blockquote > blockquote > p {
+  margin-left: -40px;
+  border-left: 10px solid #D9534F;
+  background: #FDF7F7;
+  color: #b52b27;
+}
+
+blockquote > blockquote > blockquote > blockquote > blockquote > p {
+  margin-left: -50px;
+  border-left: 10px solid #5BC0DE;
+  background: #F4F8FA;
+  color: #28a1c5;
+}
+
+blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > p {
+  margin-left: -60px;
+  border-left: 10px solid #5CB85C;
+  background: #F1F9F1;
+  color: #3d8b3d;
+}
+
+code,
+kbd,
+pre,
+samp,
+tt,
+var {
+  font-family: $appFontMonospace;
+}
+
+code {
+  background: #f9f2f4;
+  color: #9c1d3d;
+}
+
+pre {
+  padding: 2rem;
+  background: #f6f6f6;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: $appFontMonospace;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+}
+
+pre code {
+  color: #237794;
+  background: inherit;
+}
+
+address {
+  margin: 0 0 1.6em;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+small {
+  font-size: 75%;
+}
+
+big {
+  font-size: 125%;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}

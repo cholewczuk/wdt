@@ -1,0 +1,22 @@
+.pagination {
+  li {
+    background: none;
+    border: none !important;
+
+    li:hover {
+      background-color: transparentize($appColorLight, 0.5);
+    }
+
+    span {
+      color: transparentize($appColorLight, 0.5);
+    }
+
+    a {
+      color: $appColorLight;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+}

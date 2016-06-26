@@ -1,0 +1,44 @@
+@import "./settings/color";
+@import "./settings/font";
+@import "./settings/size";
+
+@import "./mixins/content";
+@import "./mixins/respondTo";
+
+@import "./modules/reset";
+@import "./modules/typography";
+@import "./modules/elements";
+@import "./modules/forms";
+@import "./modules/links";
+@import "./modules/navigation";
+@import "./modules/navigationBar";
+@import "./modules/header";
+@import "./modules/breadcrumbs";
+@import "./modules/accessibility";
+@import "./modules/alignments";
+@import "./modules/widgets";
+@import "./modules/content";
+@import "./modules/pagination";
+
+body {
+  background-color: $appColorMain;
+
+  &::after {
+    @include respond-to(desktop) {
+      background: url("../images/bg.jpg") center;
+      bottom: 0;
+      content: "";
+      filter: grayscale(100%);
+      left: 0;
+      opacity: 0.2;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+}
+
+.site {
+  padding: 5rem 0 0 0;
+}

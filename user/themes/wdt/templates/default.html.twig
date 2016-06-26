@@ -1,0 +1,42 @@
+{% embed './base.html.twig' %}
+    {% block content %}
+        <article class="post hentry published">
+            <header class="entry-header">
+                <h1 class="entry-title">{{ page.title }}</h1>
+            </header>
+            <div class="entry-content">
+                {{ page.content }}
+            </div>
+            <footer class="entry-footer">
+                <div class="entry-bottom small-part">
+                <span class="posted-on">
+                    <i class="fa fa-clock-o space-left-right"></i> {{ page.date|date('THEME_NUCLEARE.DATE_FORMAT'|t) }}
+                </span>
+                <span class="byline">
+                    <i class="fa fa-user space-left-right"></i>
+                    <span class="author vcard">
+                        {{ page.header.author ? page.header.author : config.site.author.name }}
+                    </span>
+                </span>
+                    {% if config.plugins.jscomments.enabled and header.jscomments and not truncate %}
+                        <span class="comment-link">
+                    <i class="fa fa-comments-o space-left-right"></i>
+                    <a href="{{ page.url }}/#comment">{{ 'THEME_NUCLEARE.BLOG.LEAVE_COMMENT'|t }}</a>
+                </span>
+                    {% endif %}
+                    {% if page.taxonomy.tag %}
+                        <span class="tags-links">
+                    <i class="fa fa-tags space-right"></i>
+                            {% for tag in page.taxonomy.tag %}
+                                <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+                                {% if not loop.last %}
+                                    ,
+                                {% endif %}
+                            {% endfor %}
+                </span>
+                    {% endif %}
+                </div>
+            </footer>
+        </article>
+    {% endblock %}
+{% endembed %}

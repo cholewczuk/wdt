@@ -1,0 +1,61 @@
+.widget-area {
+  font-family: $appFontSansSerif;
+  color: $appColorLight;
+  float: left;
+  width: 29%;
+  padding: 3em 0 0 3em;
+}
+
+.widget {
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin: 0 0 3em;
+  overflow: hidden;
+
+  .widget-title {
+    text-align: center;
+    font-size: $appFontSizeMenu;
+    font-size: $appFontSizeMenuRem;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: .8em;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      border-bottom: 1px solid;
+      border-color: transparentize($appColorLight, 0.5);
+      width: 100%;
+      margin: 0 .8em;
+    }
+  }
+
+  ul.archives {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      text-align: center;
+
+      a {
+        color: #fff;
+        display: block;
+        border-top: 1px dotted transparentize($appColorLight, 0.5);
+        padding: .5em 0;
+
+        &:hover {
+          background-color: transparentize($appColorLight, 0.8);
+        }
+      }
+
+      &:first-child a {
+        border: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+pl:
+  THEME_NUCLEARE:
+    CLOSE: zamknij
+    DATE_FORMAT: m/d/Y
+    ERROR: Błąd
+    HEADER_IMAGE_ALT: Główny obrazek
+    SEARCH:
+      CLOSE: Zamknij
+      BUTTON: Szukaj
+      FOR: Szukaj
+      PLACEHOLDER: (wpisz conajmniej 2 litery)
+      REQUIRED: Wymagane
+      RESULTS_FOR: Wyniki wyszukania dla
+      NO_RESULT: Brak wyników wyszukiwania
+    BLOG:
+      TAG: Tag
+      HEADER_IMAGE_ALT: Główny obrazek
+      READ_MORE: Czytaj więcej
+      LEAVE_COMMENT: Pozostaw komentarz
+      NAVIGATION: Nawigacja
+      PREV: Poprzeni post
+      NEXT: Następny post
+    FORM:
+      SUMMARY: Podsumowanie wysłanej do nas wiadomości.
+    SIDEBAR:
+      ABOUTME: O mnie
+      RELATED_POSTS: Powiązane posty
+      RANDOM_POST: Losowy post
+      BEST_TAGS: Tagi
+      ARCHIVES: Archiwum
+    TAGS:
+      MORE: Więcej
+      NO_TAG: Brak taga

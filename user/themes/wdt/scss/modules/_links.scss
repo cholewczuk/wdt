@@ -1,0 +1,39 @@
+a {
+  color: $appColorMain;
+  text-decoration: none;
+  transition: color .3s ease-in-out;
+}
+
+a:hover,
+a:focus,
+a:active,
+.entry-title a {
+  color: $appColorSecond;
+}
+
+.entry-title a:hover,
+.entry-title a:focus {
+  color: $appColorSecond;
+  text-decoration: none;
+  transition: color .3s ease-in-out;
+}
+
+.entry-content a {
+  word-break: break-word;
+}
+
+.site-info.social-icons {
+  margin: 10px auto;
+}
+
+.site-info.social-icons a {
+  display: inline-block;
+}
+
+.site-info.social-icons a + a {
+  margin-left: 10px;
+}
+
+.site-info.social-icons a:hover {
+  border: none;
+}

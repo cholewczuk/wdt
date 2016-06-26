@@ -1,0 +1,51 @@
+.alignleft {
+  display: inline;
+  float: left;
+  margin: .8em 1.6em .8em 0;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin: .8em 0 .8em 1.6em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: .8em auto;
+}
+
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after,
+.entry-bottom:before,
+.entry-bottom:after,
+.widget_archive li:before,
+.widget_archive li:after,
+.widget_categories li:before,
+.widget_categories li:after {
+  content: "";
+  display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after,
+.entry-bottom:after,
+.widget_archive li:after,
+.widget_categories li:after {
+  clear: both;
+}

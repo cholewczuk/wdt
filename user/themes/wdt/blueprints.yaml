@@ -1,0 +1,27 @@
+name: WildDogsTeam
+version: 1.0.0
+description: "Wild Dogs Team"
+icon: empire
+author:
+  name: Piotr Cholewczuk
+  email: cholewczuk@gmail.com
+  url: https://wilddogsteam.pl
+homepage: https://wilddogsteam.pl
+demo: 
+keywords: wild dogs team
+bugs: 
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    sidebar:
+      type: toggle
+      label: Enable Sidebar for the all site (can disable individually on each page)
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool

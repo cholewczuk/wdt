@@ -1,0 +1,8 @@
+{% embed './base.html.twig' %}
+	{% block content %}
+	    {% include 'partials/blog_item.html.twig' with {'blog':page.parent, 'truncate':false} %}
+	    {% if config.plugins.jscomments.enabled %}
+	    	{{ jscomments() }}
+	    {% endif %}
+	{% endblock %}
+{% endembed %}

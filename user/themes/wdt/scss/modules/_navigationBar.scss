@@ -1,0 +1,161 @@
+.navigation-bar {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  font-family: $appFontSansSerif;
+
+  @include respond-to(mobile) {
+    overflow-y: scroll;
+  }
+
+  @include respond-to(desktop) {
+    background: transparentize($appColorDark, 0.1);
+  }
+
+  .navigation-block {
+    width: 100%;
+    max-width: $appMaxWidth;
+    margin: 0 auto;
+  }
+
+  .navigation-mobile,
+  .navigation-main {
+    display: block;
+    float: left;
+  }
+
+  @include respond-to(mobile) {
+    .navigation-main {
+      display: none;
+      clear: both;
+    }
+
+    .navigation-visible {
+      float: none;
+      display: block;
+    }
+
+    &.navigation-visible {
+      bottom: 0;
+      background-color: $appColorDark;
+      overflow-y: scroll;
+
+      .navigation-main {
+        float: none;
+        display: block;
+      }
+    }
+  }
+
+  .navigation-social,
+  .navigation-search {
+    display: block;
+    float: right;
+  }
+
+  ul {
+    background: $appColorDark;
+    list-style: none;
+    margin: 0;
+  }
+
+  li {
+    display: block;
+    position: relative;
+    float:left;
+
+    @include respond-to(mobile) {
+      float: none;
+    }
+  }
+
+  a {
+    color: $appColorLight;
+    display: block;
+    font-size: $appFontSizeMenu;
+    font-size: $appFontSizeMenuRem;
+    letter-spacing: 0.1em;
+    min-width: 5rem;
+    padding: 1.2rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background .3s ease-in-out;
+  }
+
+  .navigation-main {
+    a {
+      text-align: left;
+    }
+  }
+
+  li ul {
+    background: transparentize($appColorDark, 0.2);
+    display: none;
+    padding-left: 0;
+    position: absolute;
+
+    @include respond-to(mobile) {
+      display: block;
+      position: relative;
+      padding-left: 2rem;
+
+      li a:before {
+        content: "\f105";
+        font-family: $appFontIcon;
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+
+  li:hover ul {
+    display: block;
+  }
+
+  li li {
+    display: block;
+    width: 100%
+  }
+
+  //li > ul > li:first-child {
+  //  border-top: 2px solid $appColorLight;
+  //}
+
+  //li > ul::before {
+  //  content: "";
+  //  position: absolute;
+  //  top: -1em;
+  //  left: 1.5em;
+  //  border-width: 0.5em;
+  //  border-color: transparent transparent $appColorLight;
+  //  border-style: solid;
+  //}
+
+  ul li > a:hover,
+  li.focus > a,
+  li.current-menu-item > a,
+  li.current-menu-parent > a,
+  li.current-page-ancestor > a,
+  .current_page_item > a,
+  .current_page_parent > a {
+    background: $appColorMain;
+  }
+
+  li.current-menu-item > a:hover,
+  li.current-menu-item > a {
+    background: $appColorSecond;
+  }
+
+  /* Small menu */
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-toggle:focus, .menu-toggle:hover {
+    background: $appColorMain;
+    color: #fff;
+  }
+}

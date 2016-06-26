@@ -1,0 +1,12 @@
+{
+  "name": "wdt-grav-theme",
+  "version": "1.0.0",
+  "description": "WildDogsTeam Grav Theme",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Piotr Cholewczuk",
+  "license": "MIT"
+}
